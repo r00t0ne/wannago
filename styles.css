@@ -68,6 +68,8 @@ body {
     border-color: #ff4757;
     position: absolute;
     right: 10px;  /* Butonu sağ tarafa al */
+    width: 200px; /* No butonunun genişliğini Yes butonuyla aynı yap */
+    height: 50px; /* Yükseklik aynı olsun */
 }
 
 #noButton:hover {
@@ -91,7 +93,7 @@ body {
     }
 
     #noButton {
-        /* Mobilde her tıklamada kayma etkisini yaratmak için left ve top kullanımı */
         transition: left 0.3s ease, top 0.3s ease;
     }
 }
+
