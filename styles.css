@@ -62,10 +62,12 @@ body {
     box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
 }
 
+/* Yeni konumlandırma ve mobildeki davranış */
 #noButton {
     background-color: #ff4757;
     border-color: #ff4757;
     position: absolute;
+    right: 10px;  /* Butonu sağ tarafa al */
 }
 
 #noButton:hover {
@@ -73,7 +75,7 @@ body {
     color: #ff4757;
 }
 
-/* Media Query for Responsiveness */
+/* Mobil cihazlarda butonun her tıklamada kaymasını sağla */
 @media (max-width: 768px) {
     .header_text {
         font-size: 28px;
@@ -83,8 +85,13 @@ body {
         font-size: 18px;
         padding: 10px 20px;
     }
-    
+
     .container {
         padding: 20px;
+    }
+
+    #noButton {
+        /* Mobilde her tıklamada kayma etkisini yaratmak için left ve top kullanımı */
+        transition: left 0.3s ease, top 0.3s ease;
     }
 }
