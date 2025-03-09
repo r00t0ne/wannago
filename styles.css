@@ -73,3 +73,18 @@ body {
     color: #ff4757;
 }
 
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}
