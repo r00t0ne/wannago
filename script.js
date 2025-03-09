@@ -4,13 +4,27 @@ function nextPage() {
 
 function moveButton() {
     const button = document.getElementById("noButton");
-    const maxX = window.innerWidth - button.offsetWidth;
-    const maxY = window.innerHeight - button.offsetHeight;
+    
+    // Mobilde her tıklamada buton kayacak şekilde position'ı değiştirelim
+    if (window.innerWidth <= 768) {
+        const maxX = window.innerWidth - button.offsetWidth;
+        const maxY = window.innerHeight - button.offsetHeight;
+        
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;
+    }
+    else {
+        // Masaüstü için mevcut kayma davranışı
+        const maxX = window.innerWidth - button.offsetWidth;
+        const maxY = window.innerHeight - button.offsetHeight;
 
-    button.style.left = `${randomX}px`;
-    button.style.top = `${randomY}px`;
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;
+    }
 }
-
